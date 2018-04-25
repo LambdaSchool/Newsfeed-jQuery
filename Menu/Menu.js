@@ -1,5 +1,5 @@
 //Using jQuery, select the menu element and the menu-button element
-const menu =$(".menu");
+const menu = $(".menu");
 const menuButton = $(".menu-button");
 
 //Create a callback that will be passed to the menuButton click event listener
