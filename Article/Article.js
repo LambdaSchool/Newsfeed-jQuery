@@ -1,5 +1,5 @@
 /* Using jQuery, select all the article elements */
-let articles = $(".articles");
+let articles = $(".article");
 
 
 
@@ -16,7 +16,7 @@ class Article {
       the element and set a new property on the Article class. 
     */
    //const menuButton = $(".menu-button");
-    this.expandButton = $(".expandButton");
+    this.expandButton = this.element.find(".expandButton");
     this.expandButton.text( "Click to Expand" );
     ;
     /* 
@@ -46,8 +46,9 @@ class Article {
   Within .map, we create a new instance of Article passing in each article element 
   to the constructor
 */
-articles = articles.map(function () {
-  let newArticle = new Article(".article");
-  return newArticle;
+articles = articles.map(function (i, el) {
+  console.log(el);
+  return new Article(el);
+  
 });
 console.log(articles);
