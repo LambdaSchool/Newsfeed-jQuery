@@ -32,8 +32,17 @@ class Article {
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-    let article = $(this);
-    article.toggleClass("article-open");
+    let element = $(this);
+    if (element.height() == 50){
+      TweenMax.to(this, 1, {
+        height: '400'
+      });
+    }
+    else {
+      TweenMax.to(this, 1, {
+        height: '50'
+      });
+    }
   }
 }
 
