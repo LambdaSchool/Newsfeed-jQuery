@@ -11,6 +11,6 @@ const toggleMenu = () => {
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
 
 
-    menuButton.click(toggleMenu);
+menuButton.click(toggleMenu)
 
   
