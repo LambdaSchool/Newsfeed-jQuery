@@ -57,17 +57,25 @@ articles = articles.map((index, element) => {
 // Constructor Function for new Articles
 
 class NewArticle {
-  constructor(articleObject) {// This depends on the input of course
-    this.title = articleObject.title; 
+  constructor(articleObject) { // This depends on the input of course
+    this.title = articleObject.title;
     this.date = articleObject.date;
     this.body = articleObject.body;
     this.img = articleObject.img;
+    this.expandButton = `<span class='expandButton'>Click to Expand</span>`;
+    this.title.click(() => {
+      this.expandArticle()
+    })
   }
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
     this.element.toggleClass("article-open");
+    this.expandButton.text("Click to Close");
   }
-  closeArticle() {
-    this.element.removeClass("article-open");
+  makeRoom() {
+    const newDiv = document.createElement("div") // create a new div to house our article
+    newDiv.classList += "article";
+    newDiv.insertAdjacentHTML("beforeend", `${this.title} \n ${this.date} \n ${this.body} \n ${this.img} \n ${this.expandButton}`)
+    document.body.appendChild(newDiv);
   }
 }
