@@ -1,10 +1,11 @@
 /* Using jQuery, select all the article elements */
 let articles = $(".article");
+let buttons = $(".expandButton");
 
 
 class Article {
   /* The constructor will take an element as it's only argument */
-  constructor(articles) {
+  constructor(articles, buttons) {
     /* 
       We need to make sure the element being passed to us is a jQuery element.
       To do so, wrap the element in jQuery syntax. 
@@ -14,12 +15,17 @@ class Article {
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
     */
-    this.expandButton = this.element.find("span");
+    this.expandButton = $(buttons);
     /* 
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
     */
-    this.expandButton = this.element.find("span").text("Click to expand!");
+    this.expandButton = this.element.find(".closeButton").text("Click to close!");
+    this.expandButton.click(() => {
+      this.closeArticle()
+    });
+    this.expandButton = this.element.find(".expandButton").text("Click to expand!");
+    // this.expandButton = this.element.find(".closeButton").text("Click to close!");
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
@@ -31,6 +37,9 @@ class Article {
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
+    this.element.toggleClass("article-open");
+  }
+  closeArticle() {
     this.element.toggleClass("article-open");
   }
 }

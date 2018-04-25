@@ -79,6 +79,8 @@
   transition: height 1s;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
+  display: flex;
+  flex-direction: column;
 }
 .article h2 {
   font-size: 28px;
@@ -97,7 +99,17 @@
 .article .expandButton {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  right: 40%;
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+  transform: translate(-50%);
+  background-color: white;
+}
+.article .closeButton {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
   font-size: 12px;
   color: grey;
   cursor: pointer;
