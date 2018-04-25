@@ -8,9 +8,7 @@ const menuButton = $(".menu-button");
 const toggleMenu = () => {
     $(".menu").toggleClass("menu--open");
 }
-$(".menu-button").click(toggleMenu);
 
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
-$(".menu-button").click(function () {
-    alert("button has been clicked");
-});
+$(".menu-button").click(toggleMenu);
+
