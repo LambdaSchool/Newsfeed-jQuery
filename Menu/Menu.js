@@ -5,7 +5,16 @@ const menuButton = $(".menu-button");
 //Create a callback that will be passed to the menuButton click event listener
 //Inside this callback a class should be either added or removed from menu
 const toggleMenu = () => {
-  menu.toggleClass("menu--open");
+  if (menu.width() == 0){
+    TweenMax.to(menu[0], 1, {
+      width: '350'
+    });
+  }
+  else {
+    TweenMax.to(menu[0], 1, {
+      width: '0'
+    });
+  }
 }
 
 
