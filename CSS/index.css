@@ -64,8 +64,7 @@
 .menu--open {
   display: block;
 }
-html,
-body {
+@im html, body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto';
