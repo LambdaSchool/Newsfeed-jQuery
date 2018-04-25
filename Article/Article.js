@@ -55,6 +55,9 @@ articles = articles.map((index, element) => {
 
 
 // Constructor Function for new Articles
+// This Class relies on the input passing an Object, calling new NewArticle and then calling it's make Room function
+// to manipulate the DOM in a way that it is added. 
+// The new Article will use all existing css / and animations
 
 class NewArticle {
   constructor(articleObject) { // My Constructor will accept an Object and extracts Title, Date, Body (Text), and an Image
