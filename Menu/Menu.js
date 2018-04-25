@@ -8,5 +8,16 @@ const toggleMenu = () => {
     menu.toggleClass("menu--open");
 }
 
+const slideMenu = () => {
+    // Original Approach Below
+    // menu.slideToggle(100, toggleMenu);
+    menu.animate({width:'toggle'},200);
+    // https://stackoverflow.com/a/615225
+    // Why struggle to get the answer when others already struggled for you?
+}
+
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
-menuButton.click(toggleMenu);
+menuButton.click(() => {
+    slideMenu();
+    // $("html").click(() => slideMenu());
+});

@@ -19,17 +19,28 @@ class Article {
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
     */
-    this.expandButton.text("Expand");
+    this.expandButton.text("Click to Expand");
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-   this.element.click(() => this.expandArticle());
+   this.element.click(() => this.resizeArticle()); // This part puzzles me greatly
   }
 
-  expandArticle() {
+  resizeArticle() {
     /* Using our reference to the article element, add or remove a class */
-    this.element.toggleClass("article-open");
+    // Original Solution
+    // this.element.toggleClass("article-open")
+    const buttonText = this.expandButton[0];
+    if (buttonText.innerText === "Click to Expand") {
+      this.element.animate({height:'+=400px'},300);
+      this.expandButton.text("Click to Collapse");
+    } else {
+      this.element.animate({height:'-=400px'},300);
+      this.expandButton.text("Click to Expand");
+    }
+    // A dead end below
+    // this.element.slideToggle(100, () => this.element.toggleClass("article-open"));
   }
 }
 
