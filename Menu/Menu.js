@@ -10,3 +10,10 @@ const toggleMenu = () => {
 
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
 menuButton.click(toggleMenu);
+
+// Event-listener to close Menu on click anywhere
+
+// $(document).click(() => {
+//     // if()
+//     $(menu).removeClass("menu--open")
+// })
