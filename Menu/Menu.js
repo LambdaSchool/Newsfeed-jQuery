@@ -13,4 +13,3 @@ const toggleMenu = () => {
 
 menuButton.click(toggleMenu)
 
-  

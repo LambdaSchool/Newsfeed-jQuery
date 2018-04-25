@@ -14,7 +14,7 @@ class Article {
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
     */
-    this.expandButton = $(expandButton);
+    this.expandButton = element.find("expandButton").css("color", "blue");
     /* 
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
@@ -25,16 +25,23 @@ class Article {
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-    this.element.click(() => {this.expandButton(expandArticle())});
+    this.expandButton.click(() => {this.expandArticle()})
   }
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-    toggleMenu = () => {
-      articles.toggleClass("article-open");
+    const toggleMenu = () => {
+      articles.toggleClass("article-open")
     }
   }
 }
+
+
+
+
+
+
+
 
 /* 
   Use jQuery's .map function to map over the array of jQuery elements
