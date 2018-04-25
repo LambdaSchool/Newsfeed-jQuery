@@ -19,7 +19,7 @@ class Article {
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
     */
-    this.expandButton.text('Read More');
+    this.expandButton.text('Click to expand');
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
