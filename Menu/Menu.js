@@ -8,6 +8,30 @@ const toggleMenu = () => {
     $('.menu').toggleClass('menu--open')
 }
 
+// let heading = $('.headerOne');
+
+// heading.addEventListener('click', () => {
+//     TweenMax.to('.headerOne', 3, {
+//         rotation:360,
+//     });
+// });
+
+
+// menuButton.addEventListener('click', () =>{
+//     TweenMax.to('.menu', 4, {
+//         display:'block'
+//     })
+// });
+
+// button.addEventListener('click', () => {
+//     TweenMax.to(".block", 4, {
+//         marginLeft:400,
+//         backgroundColor:'black',
+//         rotation:360,
+//         ease: Elastic. easeOut.config( 1, 0.3), 
+//     })
+// });
+
 
 
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.

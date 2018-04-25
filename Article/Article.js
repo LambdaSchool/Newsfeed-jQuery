@@ -14,23 +14,22 @@ class Article {
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
     */
-    this.expandButton = $('.expandButton');
+    this.expandButton = $(this.element).find('.expandButton');
     /* 
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
     */
-   //NOT WORKING YET
-    //this.expandButton.innerText = 'Click to Expand';
+   this.expandButton.text('Click to Expand');   
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-   this.expandButton.click(() => { this.expandArticle() })
+   this.expandButton.click(() => { this.expandArticle() });
   }
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-    this.element.addClass("article-open");
+    this.element.toggleClass("article-open");
   }
 }
 
