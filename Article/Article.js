@@ -48,4 +48,4 @@ class Article {
 */
 articles = articles.map(function (index, element){
   new Article(element)
-}
+});
