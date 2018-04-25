@@ -25,11 +25,16 @@ class Article {
       the expandArticle method. 
     */
     this.element.click(() => {this.expandArticle()});
+
+    this.articleP = this.element.find('p')
   }
+
+
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
     this.element.toggleClass('article-open');
+    // this.articleP.slideToggle()
   }
 }
 
