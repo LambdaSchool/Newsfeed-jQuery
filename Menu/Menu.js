@@ -1,10 +1,10 @@
 //Using jQuery, select the menu element and the menu-button element
 //const $el = $('.className h3'); 
 
-const menu = $(".articles");
+const menu = $(".menu");
 const menuButton = $(".menu-button");
-console.log("menu", menu );
-console.log("menu-button", menuButton);
+//console.log("menu", menu);
+//console.log("menu-button", menuButton);
 
 //.menu 
 
@@ -15,12 +15,12 @@ console.log("menu-button", menuButton);
 //Create a callback that will be passed to the menuButton click event listener
 //Inside this callback a class should be either added or removed from menu
 const toggleMenu = () => {
-    menu.toggleClass("firstClass");
-    console.log("xyz");
+    menu.toggleClass("menu--open");
+    // console.log("xyz");
 }
 
 //$el.click(() => { /* Function to run after event is fired */});
-menu.click(toggleMenu());
+menuButton.click(toggleMenu);
 
 
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
