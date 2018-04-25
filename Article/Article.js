@@ -17,18 +17,18 @@ class Article {
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
     */
-      this.expandButton = $(element).find(".expandButton").css({'color':'white','backgroundColor':'#388E3C','font-size':'1rem', 'padding':'2px'});
+      this.expandButton = $(element).find(".expandButton").css({'color':'white','backgroundColor':'#388E3C','font-size':'1rem', 'padding':'2px', 'border':'1px solid gray'});
     /* 
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
     */
-      this.expandButton.text("Expand");
+      this.expandButton.text("Click to Expand");
 
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-      this.element.click(() => {
+      this.expandButton.click(() => {
 	  this.expandArticle()
       });
   }
@@ -47,4 +47,3 @@ class Article {
 articles.map((index,element) => {
     new Article(element);
 });
-
