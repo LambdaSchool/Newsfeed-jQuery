@@ -1,3 +1,5 @@
+
+
 /* Using jQuery, select all the article elements */
 let articles;
 
