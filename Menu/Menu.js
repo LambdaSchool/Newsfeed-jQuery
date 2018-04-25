@@ -1,8 +1,14 @@
-const menu = $('.menu');
-const button = $('.menu-button')
 
-const toggleMenu = () => {
-  menu.toggleClass('menu--open');
+//const menu = $('.menu');
+//const button = $('.menu-button')
+
+//Using jQuery, select the menu element and the menu-button element
+//const menu;
+//const menuButton;
+
+
+//const toggleMenu = () => {
+  //menu.toggleClass('menu--open');
 
   //Stretch Goal #1. Animate the menu opening:
 
@@ -13,4 +19,4 @@ const toggleMenu = () => {
   // }
 }
 
-button.click(toggleMenu);
+//button.click(toggleMenu);

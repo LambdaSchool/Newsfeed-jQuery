@@ -6,8 +6,9 @@ In this project we are going to be building a news feed reader. The goal is to h
 * jQuery:
   * Selector( `$()` )
   * Methods (map, find, text, hide, show, events, etc.)
-* CSS:
+* LESS:
   * import
+  * LESS compiler
 * Javascript:
   * ES6 classes and the constructor function.
 		
@@ -45,7 +46,7 @@ If you complete the main goals of the page let's play around with jQuery a bit m
 Note: Just a reminder the stretch goals are just extra practice using the tools we have learned. These are not required. Only parts 1-3 are required portions of the project. If you do not get to the stretch goals, don't worry.
 
 * Animation: There are many ways to animate elements on the screen corresponding to user interactions. jQuery gives us a fantastic method called `.animate()`. There are also simpler methods such as `slideDown` `slideUp`, `slideToggle`, `show`, `hide` and more. Read the documentation on these methods and animate all of the components on click. You can either jump right into the jQuery, or you can research how to animate using CSS and it's properties: `transform` and `animate`. 
-  * Animation Goal #1. Animate the menu opening: You will need to change the CSS for the menu in order to acheive this. Get the menu to slide in from the left side of the screen. And slide out when the button is clicked. Bonus: Get the menu to slide back out when the user clicks anywhere on the screen other than the menu. 
+  * Animation Goal #1. Animate the menu opening: You will need to change the CSS for the menu in order to achieve this. Get the menu to slide in from the left side of the screen. And slide out when the button is clicked. Bonus: Get the menu to slide back out when the user clicks anywhere on the screen other than the menu. 
   * Animation Goal #2 Animate the article opening. This one is a bit trickier. You will need to change the CSS for this component as well. Animate the component so that it slides open and slides closed on each click. Update the text in the expand button to read `'Click to Expand'` or `'Click to Close'` depending on the state of the article. 
 
 * Close Button
