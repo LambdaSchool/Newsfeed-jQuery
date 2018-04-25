@@ -36,7 +36,7 @@ class Article {
     /* Using our reference to the article element, add or remove a class */
     if (this.element.height() == 50){
       TweenMax.to(this.element, 1, {
-        height: '400'
+        height: '500'
       });
     }
     else {
