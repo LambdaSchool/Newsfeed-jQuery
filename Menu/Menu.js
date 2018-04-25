@@ -1,3 +1,4 @@
+//Marco A. Guzman Pull commence.
 //Using jQuery, select the menu element and the menu-button element
 const menu;
 const menuButton;
