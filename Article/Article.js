@@ -30,7 +30,6 @@ class Article {
     /* Using our reference to the article element, add or remove a class */
     let article = $(this);
     article.toggleClass("article-open");
-    console.log('Hello');
   }
 }
 
