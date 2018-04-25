@@ -15,7 +15,7 @@ class Article {
       the element and set a new property on the Article class. 
     */
     // this.expandButton.click(() => {this.expandArticle()});    
-    this.expandButton = $(".expandButton");
+    this.expandButton = this.element.find(".expandButton");
     
     /* 
       Using our new reference to the expandButton, use jQuery to set the inner
@@ -24,24 +24,22 @@ class Article {
     // expandArticle() {
     //   text()("Click to Expand")
     // }
-    this.expandButton.text() = "Click to Expand";
+    this.expandButton.text("Click to Expand");
 
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-    this.element.click(() => {this.expandButton(expandArticle())});
+    this.element.click(this.expandArticle);
   }
  
 
   expandArticle () {
     /* Using our reference to the article element, add or remove a class */
-    toggleMenu = () => {
-      articles.toggleClass("article-open");
-    } 
-  }
+    let article = $(this);
+    article.toggleClass("article-open");    
+  } 
 }
-
 
 
 /* 
