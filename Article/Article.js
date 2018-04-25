@@ -29,16 +29,27 @@ class Article {
     this.expandButton.click(() => {this.expandArticle()});
   }
   expandArticle() {
-    /* Using our reference to the article element, add or remove a class */
-    this.element.toggleClass('article-open');
-    this.toggleButton();
-  }
-  toggleButton(){
     if(this.element.hasClass('article-open')){
-      this.expandButton.text('Click to Close');
+      this.animateCloseArticle();
     } else {
-      this.expandButton.text('Click to Expand');
+      this.animateOpenArticle();
     }
+  }
+  animateOpenArticle(){
+    this.element.animate({
+      height: '400px'
+    }, () => {
+      this.element.toggleClass('article-open');
+      this.expandButton.text('Click to Close');
+    });
+  }
+  animateCloseArticle(){
+    this.element.animate({
+      height: '50px'
+    }, () => {
+      this.element.toggleClass('article-open');
+      this.expandButton.text('Click to Expand');
+    });
   }
 }
 
