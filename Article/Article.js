@@ -36,4 +36,5 @@ class Article {
   Within .map, we create a new instance of Article passing in each article element 
   to the constructor
 */
+
 articles = articles.map();
