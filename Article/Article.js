@@ -20,17 +20,8 @@ class Article {
       text on the button. 
     */
 
-    this.expandButton.click(() => {
-      this.buttonClick() {
-      }
-      buttonClick(event) {
-        console.log("button clicked");
-      }
-    });
-    let buttons = $('.article');
-    buttons = buttons.map(function (index, element) {
-      new buttons(element);
-    });
+    this.expandButton.text('click here');
+    console.log(expandButton.text());
 
     /* 
       Set a click handler on the expand button (or article element), calling 
