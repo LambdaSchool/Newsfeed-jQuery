@@ -36,11 +36,13 @@ class Article {
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-    this.element.toggleClass('article-open rollIn');
+    this.element.toggleClass('article-open');
     console.log(this.para.length);
+
+    /** ANIMATE open button */
     let font_size = this.para.css('font-size');
-    this.para.animate({ color: '#000', fontSize: '20px' });
-    this.para.animate({ color: '#000', fontSize: font_size });
+    this.para.animate({ color: '#000', fontSize: '20px' }, 1000);
+    this.para.animate({ color: '#000', fontSize: font_size }, 1000);
   }
 
 }
