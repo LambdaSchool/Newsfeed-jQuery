@@ -1,7 +1,6 @@
 /* Using jQuery, select all the article elements */
 let articles = $('.articles');
 
-
 class Article {
   /* The constructor will take an element as it's only argument */
   constructor(element) {
@@ -19,17 +18,17 @@ class Article {
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
     */
-    $('.expandButton').text('Click to expand');
+   $('.expandButton').text('Click to Expand');
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-    this.element.click(() => this.expandArticle);
+   this.element.click(() => this.expandArticle());
   }
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-    $('.article').toggleClass('article-open');
+      $('.article').toggleClass("article-open");
   }
 }
 
@@ -37,7 +36,7 @@ class Article {
   Use jQuery's .map function to map over the array of jQuery elements
   Within .map, we create a new instance of Article passing in each article element 
   to the constructor
-*/
+*/ 
 articles = articles.map(function(index, element) {
-  return new Article(element);
+ return new Article(element);
 });
