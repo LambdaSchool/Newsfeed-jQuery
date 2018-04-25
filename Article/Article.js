@@ -9,7 +9,7 @@ class Article {
       To do so, wrap the element in jQuery syntax. 
     */
     this.element = $(element);
-    console.log(element);
+    // console.log(element);
     /* 
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
@@ -28,12 +28,18 @@ class Article {
       console.log('button clicked');
       this.expandArticle();
     });
+
+    /** STRETCH GOAL */
+    this.para = this.element.find('p');
+    // console.log(this.para);
   }
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-    this.element.toggleClass('article-open');
+    this.element.toggleClass('article-open rollIn');
+    console.log(this.para.length);
   }
+
 }
 
 /* 
@@ -44,3 +50,9 @@ class Article {
 articles = articles.map( (i, art) => {
   new Article(art);
 });
+
+/** ADD NEW ARTICLES TO THE PAGE */
+let articles2 = $('.articles-2');
+articles2 = articles2.map( (i, art) => {
+  new Article(art);
+} )

@@ -64,7 +64,8 @@
 .menu--open {
   display: block;
 }
-.articles {
+.articles,
+.articles-2 {
   margin-top: 95px;
 }
 .article {
