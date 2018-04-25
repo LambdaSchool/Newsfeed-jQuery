@@ -1,5 +1,5 @@
 /* Using jQuery, select all the article elements */
-let articles = $(".articles *");
+let articles = $(".article *");
 
 
 class Article {
@@ -16,11 +16,18 @@ class Article {
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
     */
-    this.expandButton;
+    this.expandButton = this.element.find(".expandButton");
+     
+    }
     /* 
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
+      
     */
+  this.
+  expandButton(event) {
+    console.log("button has been clicked!")
+  }
 
     /* 
       Set a click handler on the expand button (or article element), calling 
@@ -33,16 +40,16 @@ class Article {
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-  }
+  articles.toggleClass("article-open"); 
 }
+
 
 /* 
   Use jQuery's .map function to map over the array of jQuery elements
   Within .map, we create a new instance of Article passing in each article element 
   to the constructor*/
-  $("articles").map(function(index, element) {
-    console.log(element.innerHTML.toUpperCase());
-  
+articles = articles.map(function (i, elem) {
+  new Article(elem);
   });
 
 articles = articles.map();
