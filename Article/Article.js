@@ -38,6 +38,9 @@ class Article {
     /* Using our reference to the article element, add or remove a class */
     this.element.toggleClass('article-open rollIn');
     console.log(this.para.length);
+    let font_size = this.para.css('font-size');
+    this.para.animate({ color: '#000', fontSize: '20px' });
+    this.para.animate({ color: '#000', fontSize: font_size });
   }
 
 }
