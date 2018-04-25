@@ -1,44 +1,50 @@
 /* Using jQuery, select all the article elements */
-const articles = $(".articles");
+let articles = $('.article');
+
 
 class Article {
   /* The constructor will take an element as it's only argument */
-  constructor(article) {
+  constructor(element) {
     /* 
       We need to make sure the element being passed to us is a jQuery element.
       To do so, wrap the element in jQuery syntax. 
     */
-    this.article = $(article);
+   this.element = $(element);
     /* 
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
     */
-    this.expandButton = $(article).find('.expandButton');
+    this.expandButton = this.element.find('.expandButton');
     /* 
       Using our new reference to the expandButton, use jQuery to set the inner
-      text on the button. 
+      text on the button. v
     */
-    let expansion = this.expandButton.val("Click to expand");
+    this.expandButton.text("click to expand");
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-    let expandArticle = () => {
-      let article = $(this);
-      article.toggleClass("article-open");
-    };
+    
 
-  expansion.click(() => {
-    /* Using our reference to the article element, add or remove a class */
-  this.expandArticle();
-});
+    this.expandButton.click( () => {
+      console.log('button clicked');
+      this.expandArticle();
+      });
+  
+    this.pTag = this.element.find('p');
+    /* 
+      Use jQuery's .map function to map over the array of jQuery elements
+      Within .map, we create a new instance of Article passing in each article element 
+      to the constructor
+    */
+   let expandArticle = () => {
+    this.element.toggleClass('article-open');
+    }
 
-/* 
-  Use jQuery's .map function to map over the array of jQuery elements
-  Within .map, we create a new instance of Article passing in each article element 
-  to the constructor
-*/
-articles = articles.map();
-articles.map(function(index, article){
-  console.log(article.innerHTML)
-});
+    articles = articles.map( (index, article) => {
+      new Article(element);
+      });
+      
+
+  }
+}
