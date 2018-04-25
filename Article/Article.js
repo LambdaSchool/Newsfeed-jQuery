@@ -11,7 +11,7 @@ class Article {
     this.expandButton.click(() => {this.expandArticle()});
 
     this.closeButton = this.element.find('.close');
-    this.closeButton.click(() => { this.closeArticle() });
+    this.closeButton.click(() => { this.removeArticle() });
   }
   expandArticle() {
     if(this.element.hasClass('article-open')){
@@ -36,7 +36,7 @@ class Article {
       this.expandButton.text('Click to Expand');
     });
   }
-  closeArticle(){
+  removeArticle(){
     this.element.remove();
   }
 }
