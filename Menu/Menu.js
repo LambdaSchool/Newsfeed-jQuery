@@ -12,7 +12,12 @@ const toggleMenu = () => {
 //menuButton.click(toggleMenu);
 
 $(document).ready(function () {
-    $(".menu-button").click(function () {
+    $(".menu-button").mouseover(function () {
+        $(".menu").animate({
+            width: "toggle"
+        });
+    });
+    $(".menu").mouseleave(function () {
         $(".menu").animate({
             width: "toggle"
         });
