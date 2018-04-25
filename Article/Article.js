@@ -1,5 +1,5 @@
 /* Using jQuery, select all the article elements */
-let articles;
+let articles = $('.article');
 
 
 class Article {
@@ -9,16 +9,28 @@ class Article {
       We need to make sure the element being passed to us is a jQuery element.
       To do so, wrap the element in jQuery syntax. 
     */
-    this.element = $();
+    this.element = $(element);
     /* 
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
     */
-    this.expandButton;
+    this.expandButton = element.expandButton;
     /* 
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
     */
+
+    this.expandButton.click(() => {
+      this.buttonClick() {
+      }
+      buttonClick(event) {
+        console.log("button clicked");
+      }
+    });
+    let buttons = $('.article');
+    buttons = buttons.map(function (index, element) {
+      new buttons(element);
+    });
 
     /* 
       Set a click handler on the expand button (or article element), calling 
