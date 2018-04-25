@@ -1,5 +1,9 @@
 /* Using jQuery, select all the article elements */
-let articles;
+let articles = $(".articles");
+articles.map(function(index, element){
+  console.log(element.innerHTML)
+});
+
 
 
 class Article {
