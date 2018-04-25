@@ -26,6 +26,7 @@ class Article {
       the expandArticle method.
     */
     this.expandButton.click(() => { this.expandArticle() });
+    
   }
 
   expandArticle() {
@@ -41,4 +42,15 @@ class Article {
 */
 articles = articles.map(function(index, element) {
   new Article(element);
+});
+
+
+menuButton.click(function() {
+  menu.animate({
+    opacity: 1.0,
+    left: "0",
+    height: "toggle"
+  }, 2500, function() {
+    // Animation complete.
+  });
 });

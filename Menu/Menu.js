@@ -23,3 +23,12 @@ const toggleMenu = () => {
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
 menuButton.click(toggleMenu);
 
+menuButton.click(function() {
+    menu.animate({
+      opacity: 1.0,
+      left: "0",
+      height: "toggle"
+    }, 2500, function() {
+      // Animation complete.
+    });
+});
