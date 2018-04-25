@@ -31,6 +31,14 @@ class Article {
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
     this.element.toggleClass('article-open');
+    this.toggleButton();
+  }
+  toggleButton(){
+    if(this.element.hasClass('article-open')){
+      this.expandButton.text('Click to Close');
+    } else {
+      this.expandButton.text('Click to Expand');
+    }
   }
 }
 
