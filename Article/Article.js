@@ -25,12 +25,23 @@ class Article {
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-    this.element.click(() => { this.expandArticle() })
+    this.expandButton.click(() => { this.expandArticle() })
   }
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-    this.element.toggleClass("article-open")
+    // this.element.toggleClass("article-open")
+    if(this.expandButton.text() === "Expand"){
+      this.element.animate({
+        height: "400px",
+      }, 1500);
+      this.expandButton.text("Close");
+    } else {
+      this.element.animate({
+        height: "50px",
+      }, 1500);
+      this.expandButton.text("Expand");
+    }
   }
 }
 
