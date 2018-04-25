@@ -5,8 +5,8 @@ const menuButton = $('.menu-button');
 //Create a callback that will be passed to the menuButton click event listener
 //Inside this callback a class should be either added or removed from menu
 const toggleMenu = () => {
-    console.log();
-    if (menu.hasClass('menu--open')) {
+    console.log(menu.hasClass('menu--open'));
+    if (!menu.hasClass('menu--open')) {
         menu.toggleClass('menu--open');
         menu.animate( {
             zIndex: 2
