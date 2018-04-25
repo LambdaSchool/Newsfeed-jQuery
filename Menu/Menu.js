@@ -30,7 +30,8 @@ class MenuButton {
     }
     buttonClick(event) {
         console.log("button clicked!");
-    
+    }
+}       
 
 
 
