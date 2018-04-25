@@ -6,6 +6,8 @@ const menuButton = $(".menu-button");
 //Inside this callback a class should be either added or removed from menu
 const toggleMenu = () => {
    menu.toggleClass("menu--open");
+   menu.animate({ left: -100}, 500);
+   menu.animate({left: 0,}, 500);
 }
 //how come the period is not required in the class?  
 
