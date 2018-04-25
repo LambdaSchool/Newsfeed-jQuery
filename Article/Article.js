@@ -1,6 +1,5 @@
 /* Using jQuery, select all the article elements */
-let articles;
-
+let articles = $('.articles').find('.article');
 
 class Article {
   /* The constructor will take an element as it's only argument */
