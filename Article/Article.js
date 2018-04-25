@@ -1,7 +1,6 @@
 /* Using jQuery, select all the article elements */
 let articles = $('.articles');
 
-
 class Article {
   /* The constructor will take an element as it's only argument */
   constructor(element) {

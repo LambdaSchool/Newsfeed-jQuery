@@ -8,10 +8,16 @@ let toggleMenu = () => {
     $(".menu").toggleClass("menu--open");
 }
 
-// .toggleClass()
-// $(".menu-button").click(function() {
-//     $(".menu").toggleClass("menu");
-// });
-
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
 $(".menu-button").click(toggleMenu);
+
+//animations
+$( ".menu-button" ).click(function() {
+    $( ".menu" ).animate({
+      opacity: .50,
+      left: "+=50",
+      height: "toggle"
+    }, 1000, function() {
+      // Animation complete.
+    });
+  });
