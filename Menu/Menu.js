@@ -7,6 +7,7 @@ const menuButton = $(".menu-button");
 const toggleMenu = () => {
    menu.toggleClass("menu--open");
 }
+//how come the period is not required in the class?  
 
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
 menuButton.click(toggleMenu);
