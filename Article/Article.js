@@ -31,8 +31,8 @@ class Article {
     /* Using our reference to the article element, add or remove a class */
     // Original Solution
     // this.element.toggleClass("article-open")
-    const buttonText = this.expandButton[0];
-    if (buttonText.innerText === "Click to Expand") {
+    const buttonText = this.expandButton;
+    if (buttonText.text() === "Click to Expand") {
       this.element.animate({height:'+=400px'},300);
       this.expandButton.text("Click to Collapse");
     } else {
