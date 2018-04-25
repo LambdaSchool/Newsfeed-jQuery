@@ -18,6 +18,7 @@ class Article {
       the element and set a new property on the Article class.
     */
     this.expandButton = this.element.find('.expandButton');
+    this.readButton = this.element.find('.readButton');
     /*
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button.
@@ -27,22 +28,27 @@ class Article {
       Set a click handler on the expand button (or article element), calling
       the expandArticle method.
     */
-    this.element.click(this.expandArticle);
+    this.element.click(this.expandArticle.bind(this));
+    this.readButton.click(this.closeArticle.bind(this));
   }
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-    let element = $(this);
-    if (element.height() == 50){
-      TweenMax.to(this, 1, {
+    if (this.element.height() == 50){
+      TweenMax.to(this.element, 1, {
         height: '400'
       });
     }
     else {
-      TweenMax.to(this, 1, {
+      TweenMax.to(this.element, 1, {
         height: '50'
       });
     }
+  }
+
+  closeArticle(event) {
+    event.stopPropagation();
+    this.element.hide();
   }
 }
 
