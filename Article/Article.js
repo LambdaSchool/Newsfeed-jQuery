@@ -1,5 +1,5 @@
 /* Using jQuery, select all the article elements */
-let articles = $(".articles");
+let articles = $(".article");
 
 
 class Article {
@@ -32,15 +32,13 @@ class Article {
     */
     this.element.click(this.expandArticle);
   }
- 
-
+  
   expandArticle () {
     /* Using our reference to the article element, add or remove a class */
     let article = $(this);
     article.toggleClass("article-open");    
   } 
 }
-
 
 /* 
   Use jQuery's .map function to map over the array of jQuery elements
