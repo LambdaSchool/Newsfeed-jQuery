@@ -99,7 +99,7 @@
 .article .expandButton {
   position: absolute;
   bottom: 0;
-  right: 40%;
+  right: 43%;
   font-size: 12px;
   color: grey;
   cursor: pointer;
@@ -109,7 +109,7 @@
 .article .closeButton {
   position: absolute;
   bottom: 0;
-  left: 40%;
+  left: 43%;
   font-size: 12px;
   color: grey;
   cursor: pointer;

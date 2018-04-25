@@ -40,7 +40,7 @@ class Article {
     this.element.toggleClass("article-open");
   }
   closeArticle() {
-    this.element.toggleClass("article-open");
+    this.element.removeClass("article-open");
   }
 }
 
@@ -52,3 +52,22 @@ class Article {
 articles = articles.map((index, element) => {
   new Article(element);
 });
+
+
+// Constructor Function for new Articles
+
+class NewArticle {
+  constructor(articleObject) {// This depends on the input of course
+    this.title = articleObject.title; 
+    this.date = articleObject.date;
+    this.body = articleObject.body;
+    this.img = articleObject.img;
+  }
+  expandArticle() {
+    /* Using our reference to the article element, add or remove a class */
+    this.element.toggleClass("article-open");
+  }
+  closeArticle() {
+    this.element.removeClass("article-open");
+  }
+}

@@ -13,7 +13,8 @@ menuButton.click(toggleMenu);
 
 // Event-listener to close Menu on click anywhere
 
-// $(document).click(() => {
-//     // if()
-//     $(menu).removeClass("menu--open")
+// $(document).click((e) => {
+//     if (!$(e.target).is(".header")) {
+//         $(menu).toggleClass("menu--open")
+//     }
 // })
