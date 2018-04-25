@@ -17,8 +17,8 @@ $(document).ready(function () {
             width: "toggle"
         })
     });
-    
-    $(document).click(function() {
+
+    $('.menu').mouseleave(function() {
         $('.menu').animate({
             width: 'toggle'
         })
