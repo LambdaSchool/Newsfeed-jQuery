@@ -6,8 +6,15 @@ const menuButton = $('.menu-button');
 //Inside this callback a class should be either added or removed from menu
 const toggleMenu = () => {
     menu.toggleClass('menu--open');
-    console.log('Hello');
 };
 
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
-menuButton.click(toggleMenu);
+//menuButton.click(toggleMenu);
+
+$(document).ready(function () {
+    $(".menu-button").click(function () {
+        $(".menu").animate({
+            width: "toggle"
+        });
+    });
+});
