@@ -29,3 +29,28 @@ const toggleMenu = () => {
 
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
 menuButton.click(toggleMenu);
+
+/** STRETCH Create a component constructor function */
+class NavItemLink {
+    constructor(element) {
+        this.element = $(element);
+        this.element.click( () => {
+            this.popUp();
+        } )
+    }
+    popUp() {
+        this.element.animate( {
+            color: '#0F0',
+            fontSize: '1px'
+        }, 1000 )
+        this.element.animate( {
+            // display: 'none'
+        }, 1000 )
+    }
+}
+menuItems = menu.find('li');
+console.log(menuItems);
+menuItems = menuItems.map( (i, li) => {
+    new NavItemLink(li);
+    console.log('index', i);
+} )
