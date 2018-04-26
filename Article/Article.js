@@ -31,8 +31,16 @@ class Article {
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
     $(this.element).toggleClass("article-open");
-  }
-}
+    //animate trigger 
+    $(this.element).animate({
+      opacity: 0.25,
+      left: "+=50",
+      height: "toggle"
+    }, 5000, function(){
+
+    });
+  };
+};
 /* 
   Use jQuery's .map function to map over the array of jQuery elements
   Within .map, we create a new instance of Article passing in each article element 
