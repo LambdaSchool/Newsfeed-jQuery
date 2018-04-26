@@ -44,6 +44,7 @@ class Article {
     // Original Solution
     // this.element.toggleClass("article-open")
     const buttonText = this.expandButton;
+    // Thank you, William, for helping me remember I can get text from `text()`
     if (buttonText.text() === "Click to Expand") {
       this.element.animate({height:'+=350px'},300);
       // Until I can work out the css, I'm going to hide the button when it's expanded
