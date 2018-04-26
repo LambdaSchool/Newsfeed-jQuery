@@ -26,13 +26,26 @@ class Article {
    this.element.click(() => {
      this.expandArticle()})
    }
-
+  
  /* Using our reference to the article element, add or remove a class */
-  expandArticle(element) {
-      this.element.toggleClass("article-open");
+  expandArticle() {
+      if (this.element.css('height') <= '50px')  {
+        this.element.css('height') == '50px';
+        this.element.animate({
+            height: '450px',
+        }, 5000)
+        this.expandButton.text('Click to Close');
+        } 
   }
 }
-
+$('.articles').click(function() {
+  if ($('.article').css('height') == '450px') {
+    $('.article').animate({
+      height: '50px'
+  }, { 
+    duration: 5000,
+})}
+})
 /* 
   Use jQuery's .map function to map over the array of jQuery elements
   Within .map, we create a new instance of Article passing in each article element 
@@ -41,3 +54,4 @@ class Article {
 articles = articles.map(function(index, element) {
   new Article(element);
 });
+
