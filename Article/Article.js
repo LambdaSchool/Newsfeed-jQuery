@@ -25,7 +25,12 @@ class Article {
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-    this.expandButton.click(() => { this.expandArticle() })
+    this.expandButton.click(() => { this.expandArticle() });
+
+    //this is all stretch
+    this.markRead = this.element.find(".markRead");
+    this.markRead.text("Mark As Read");
+    this.markRead.click(() => { this.hideArticle() });
   }
 
   expandArticle() {
@@ -42,6 +47,10 @@ class Article {
       }, 1500);
       this.expandButton.text("Expand");
     }
+  }
+  //this is to hide article when the button is pressed
+  hideArticle() {
+    this.element.hide(1500);   
   }
 }
 
