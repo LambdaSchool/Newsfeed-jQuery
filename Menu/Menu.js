@@ -14,6 +14,7 @@ menuButton.click( () => {
 
 //Using jQuery, add a click event to the menuButton, passing it the toggleMenu function.
 $(document.body).click(function (){
+    //SLIDEDOWN method
     menuSlide.click( () => {
         if ( $( "menuSlide:first" ).is( ":hidden" ) ) {
             $( "menuSlide" ).slideDown( "slow" );
