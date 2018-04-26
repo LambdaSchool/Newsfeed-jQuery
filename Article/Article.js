@@ -19,23 +19,18 @@ class Article {
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
     */
-    this.expandButton.text('Click to Expand');
-    
-
+    this.expandButton.text('Click to Expand'); 
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-   
-    this.element.click(() => { this.expandArticle() });
-    
-    
+    this.expandButton.click(() => this.expandArticle());   
   }
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
-    console.log(expandButton);
-    articles.toggleClass('a class')
+    //console.log(expandButton);
+    this.element.toggleClass('article-open')
   }
 }
 
@@ -44,6 +39,6 @@ class Article {
   Within .map, we create a new instance of Article passing in each article element 
   to the constructor
 */
-articles = articles.map((ind, el) => {
-  console.log(new Article(el));
+articles = articles.map((index, el) => {
+  return new Article(el);
 });
