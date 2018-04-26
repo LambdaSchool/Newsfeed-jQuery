@@ -1,122 +1,96 @@
 <!-- Do not add anything to the HTML until Part 3 of the project -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Lambda School Newsfeed</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="./CSS/index.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="./Menu/Menu.js" async></script>
-    <script src="./Article/Article.js" async></script>
-  </head>
-  <body>
-    <div class="header">
-      <img class="menu-button" src="./assets/menu.png"/>
-      <h1>Lambda School Newsfeed</h1>
-    </div>
-    <div class="menu">
-      <ul>
-        <li>Students</li>
-        <li>Faculty</li>
-        <li>What's New</li>
-        <li>Tech Trends</li>
-        <li>Music</li>
-        <li>Log Out</li>
-      </ul>
-    </div>
-    <div class="articles">
-      <div class="article">
-        <h5>Lambda School, where students don’t pay until they land a $50,000 tech job, graduates its first class</h5>
-        <p class="date">January 30, 2018</p>
-
-        <p>While the tech industry offers some of the highest-paying and fastest-growing jobs in the U.S., obtaining one is still
-        out of reach for many Americans. Particularly for those who are looking to make a career change, it’s expensive. Tuition for
-        six-month coding schools can run upwards of $10,000, and some graduates still have to complete an internship or two before
-         employers will consider them for an entry-level job engineering job.</p>
-
-        <p>Enter Lambda School, a nearly year-old startup that aims to remove some of the traditional barriers that have scared students away
-        from coding schools in the past. Today, Lambda School announced that it has closed a $4 million seed round, led by Y Combinator and
-        Tandem Capital. The school has also graduated its first batch of 20 students from its software engineering course — five of whom already
-        have job offers a week after graduation.</p>
-
-        <p>Lambda School is one of a number of new tech school entrants that is giving students the option of paying for their education via an
-        income-share agreement, rather than paying for tuition upfront. The idea is to reassure students, some of whom may have felt that their
-        previous degrees or training have been worthless in the job search, that Lambda School’s main goal is to prepare them for...<a href="https://venturebeat.com/2018/01/30/lambda-school-where-students-dont-pay-until-they-land-a-50000-tech-job-graduates-its-first-class/" target="_blank">Click to continue reading the whole article.</a></p>
-        <span class='expandButton'></span>
+<head>
+  <title>Lambda School Newsfeed</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/index.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="./Menu/Menu.js" async></script>
+  <script src="./Article/Article.js" async></script>
+</head>
+<body>
+  <div class="header">
+    <img class="menu-button" src="./assets/menu.png"/>
+    <h1>Lambda School Newsfeed</h1>
+  </div>
+  <div class="menu">
+    <ul>
+      <li>Students</li>
+      <li>Faculty</li>
+      <li>What's New</li>
+      <li>Tech Trends</li>
+      <li>Music</li>
+      <li>Log Out</li>
+    </ul>
+  </div>
+  <div class="articles">
+    <div class="article">
+      <h2>Lambda School, where students don’t pay until they land a $50,000 tech job, graduates its first class</h2>
+      <p class="date">January 30, 2018</p>
+      <p class="author">Author: Anna Hensel</p>
+      <div id="article1" class="collapse">
+        <p>While the tech industry offers some of the highest-paying and fastest-growing jobs in the U.S., obtaining one is still out of reach for many Americans. Particularly for those who are looking to make a career change, it’s expensive. Tuition for six-month coding schools can run upwards of $10,000, and some graduates still have to complete an internship or two before employers will consider them for an entry-level job engineering job.</p>
+        <p>Enter Lambda School, a nearly year-old startup that aims to remove some of the traditional barriers that have scared students away from coding schools in the past. Today, Lambda School announced that it has closed a $4 million seed round, led by Y Combinator and Tandem Capital. The school has also graduated its first batch of 20 students from its software engineering course — five of whom already have job offers a week after graduation.</p>
+        <p>Lambda School is one of a number of new tech school entrants that is giving students the option of paying for their education via an income-share agreement, rather than paying for tuition upfront. The idea is to reassure students, some of whom may have felt that their previous degrees or training have been worthless in the job search, that Lambda School’s main goal is to prepare them for...<a href="https://venturebeat.com/2018/01/30/lambda-school-where-students-dont-pay-until-they-land-a-50000-tech-job-graduates-its-first-class/" target="_blank">Click to continue reading the whole article.</a></p>
       </div>
-      <div class="article">
-        <h2>ES6 in Action: let and const</h2>
-        <p class="date">April 6, 2018</p>
-        <p>In this tutorial, I’ll introduce let and const, two new keywords added to JavaScript with the arrival of ES6. They enhance JavaScript
-        by providing a way to define block-scope variables and constants.</p>
-
-        <p>This article is one of many covering new features of JavaScript introduced with ES6, including Map and WeakMap, Set and WeakSet, new
-        methods available for String, Number, and Array, and the new syntax available for...<a href="https://www.sitepoint.com/es6-let-const/" target="_blank">Click to continue reading the whole article.</a></p>
-        <span class='expandButton'></span>
+      <span class="btn btn-info expandButton" data-toggle="collapse" data-target="#article1"></span>
+    </div>
+    <div class="article">
+      <h2>ES6 in Action: let and const</h2>
+      <p class="date">April 6, 2018</p>
+      <p class="author">Author: Aurelio De Rosa</p>
+      <div id="article2" class="collapse">
+        <p>In this tutorial, I’ll introduce let and const, two new keywords added to JavaScript with the arrival of ES6. They enhance JavaScript by providing a way to define block-scope variables and constants.</p>
+        <p>This article is one of many covering new features of JavaScript introduced with ES6, including Map and WeakMap, Set and WeakSet, new methods available for String, Number, and Array, and the new syntax available for...<a href="https://www.sitepoint.com/es6-let-const/" target="_blank">Click to continue reading the whole article.</a></p>
       </div>
-      <div class="article">
-        <h2>Angular 5 vs. React vs. Vue</h2>
-        <p class="date">February 7, 2018</p>
-
+      <span class="btn btn-info expandButton" data-toggle="collapse" data-target="#article2"></span>
+    </div>
+    <div class="article">
+      <h2>Angular 5 vs. React vs. Vue</h2>
+      <p class="date">February 7, 2018</p>
+      <p class="author">Author: Michael Petrosyan</p>
+      <div id="article3" class="collapse">
         <p>Nowadays, technologies are growing very fast. Every day, week and month more and more tools appear to solve different problems.</p>
-
-        <p>In this article, I want to compare 3 of the most popular technologies for the front end development: Angular 5, React, and Vue.
-        I am going to compare them from the perspective of the project architect or just a developer who is going to choose a framework for
-        the new project.</p>
-
-        <p>OK, let’s start from React. Many people name it a framework. Well, actually it isn’t . React is just a view oriented library. It’s
-        a view in MVC. Angular and Vue are frameworks.</p>
-
+        <p>In this article, I want to compare 3 of the most popular technologies for the front end development: Angular 5, React, and Vue. I am going to compare them from the perspective of the project architect or just a developer who is going to choose a framework for the new project.</p>
+        <p>OK, let’s start from React. Many people name it a framework. Well, actually it isn’t . React is just a view oriented library. It’s a view in MVC. Angular and Vue are frameworks.</p>
         <p>So, to choose one, we should start from this point: Do we need a library or framework? Let’s look at each one deeper.</p>
-
-        <p>Actually, libraries are designed for doing only some specific tasks and they are not so complex. If you are constructing
-        your application form libraries, you need to choose a library for every task, you need to setup...<a href="https://itnext.io/angular-5-vs-react-vs-vue-6b976a3f9172" target="_blank">Click to continue reading the whole article.</a></p>
-        <span class='expandButton'></span>
+        <p>Actually, libraries are designed for doing only some specific tasks and they are not so complex. If you are constructing your application form libraries, you need to choose a library for every task, you need to setup...<a href="https://itnext.io/angular-5-vs-react-vs-vue-6b976a3f9172" target="_blank">Click to continue reading the whole article.</a></p>
       </div>
-      <div class="article">
-        <h2>The Practical Guide to Becoming a Professional Web Developer</h2>
-        <p class="date">June 20, 2016</p>
-        <p>This article is meant to serve as a practical guide to becoming a professional web developer. I’ve spent over 20 years writing code
-        for the web. I work with and help developers daily. In this article, I will tell you what you should learn, when you should learn it,
-        and where you can learn it from (usually for free). I’ll then give you advice on how to get real world experience and, most importantly,
-        how to get paid for writing code.</p>
-
-        <p>Author’s Note: Due to popular demand, this article is now available as an expanded eBook that includes a special appendix that puts all
-        the links from this article in one easy to follow list. You can get the eBook version here.</p>
-
-        <p>I get no direct compensation for mentioning any of the sites listed here. I just want to provide you with the best resources possible to
-        help you get where you’re going.</p>
-
-        <p>Two things to keep in mind…</p>
-
-        <p>1. It’s okay to skip ahead.<p>
-
-        <p>This guide will help you no matter where you are on your journey toward becoming a professional developer. After reading this introduction,
-        just scroll to the heading that best describes your situation and begin reading from there. If you’re just getting started, or just thinking about
-        getting started...<a href="https://medium.freecodecamp.org/the-practical-guide-to-becoming-a-professional-web-developer-2f255bc25c90" target="_blank">Click to continue reading the whole article.</a></p>
-        <span class='expandButton'></span>
-      </div>
-      <div class="article">
-        <h2>Google Redesigns Gmail - Here's a List of Amazing New Features</h2>
-        <p class="date">April 25, 2018</p>
-
-        <p>Google has finally been rolling out its new massively redesigned Gmail for desktop and mobile to 1.4 billion of users worldwide, which might
-        be the most significant single upgrade in Gmail's history. This huge revamped version of the email service now offers plenty of new features such as
-        confidential mode, offline support, email snoozing and more, to make Gmail more smarter, secure, and easier to use. In this article, I have listed details
-        of the most significant changes that you need to know and how to use them. Give it a quick read.</p>
-
-        <p>Are you afraid of sending sensitive documents in an email due to fear of hacking or being forwarded? Well, now you can simply click the lock icon at
-        the bottom of an email to enable the new Confidential Mode, which lets you add a bunch of extra layers of security (as mentioned below) to the emails of your choice.</p>
-
-        <p>1) Self-Destructing Emails: This feature lets you send emails that disappear from the recipient's inbox after a period (between 1 day and five years) you specify or which you can revoke at any time even after you have sent them.</p>
-
-        <p>2) Un-Forwardable Emails: Confidential emails open in a special window that does not allow the recipient to forward, copy or print the email, though recipients can still grab a screenshot, or snap a photo from their phone.</p>
-
-        <p>3) Two-factor Authentication (2FA) for Emails: If you're paranoid, you can even enable 2FA for a single email, requiring recipients to enter a secret passcode send to them via SMS before opening it.</p>
-
-        <p>All the above Confidential Mode features work even with emails sent to non-Gmail users, requiring them to click on a link before...<a href="https://thehackernews.com/2018/04/new-gmail-redesign.html" target="_blank">Click to continue reading the whole article.</a></p>
-
-        <span class='expandButton'></span>
-      </div>
+      <span class="btn btn-info expandButton" data-toggle="collapse" data-target="#article3"></span>
     </div>
-  </body>
+    <div class="article">
+      <h2>The Practical Guide to Becoming a Professional Web Developer</h2>
+      <p class="date">June 20, 2016</p>
+      <p class="author">Author: Bill Sourour</p>
+      <div id="article4" class="collapse">
+        <p>This article is meant to serve as a practical guide to becoming a professional web developer. I’ve spent over 20 years writing code for the web. I work with and help developers daily. In this article, I will tell you what you should learn, when you should learn it, and where you can learn it from (usually for free). I’ll then give you advice on how to get real world experience and, most importantly, how to get paid for writing code.</p>
+        <p>Author’s Note: Due to popular demand, this article is now available as an expanded eBook that includes a special appendix that puts all the links from this article in one easy to follow list. You can get the eBook version here.</p>
+        <p>I get no direct compensation for mentioning any of the sites listed here. I just want to provide you with the best resources possible to help you get where you’re going.</p>
+        <p>Two things to keep in mind…</p>
+        <p>1. It’s okay to skip ahead.</p>
+        <p>This guide will help you no matter where you are on your journey toward becoming a professional developer. After reading this introduction, just scroll to the heading that best describes your situation and begin reading from there. If you’re just getting started, or just thinking about getting started...<a href="https://medium.freecodecamp.org/the-practical-guide-to-becoming-a-professional-web-developer-2f255bc25c90" target="_blank">Click to continue reading the whole article.</a></p>
+      </div>
+      <span class="btn btn-info expandButton" data-toggle="collapse" data-target="#article4"></span>
+    </div>
+    <div class="article">
+      <h2>Google Redesigns Gmail - Here's a List of Amazing New Features</h2>
+      <p class="date">April 25, 2018</p>
+      <p class="author">Author: Swati Khandelwal</p>
+      <div id="article5" class="collapse">
+        <p>Google has finally been rolling out its new massively redesigned Gmail for desktop and mobile to 1.4 billion of users worldwide, which might be the most significant single upgrade in Gmail's history. This huge revamped version of the email service now offers plenty of new features such as confidential mode, offline support, email snoozing and more, to make Gmail more smarter, secure, and easier to use. In this article, I have listed details of the most significant changes that you need to know and how to use them. Give it a quick read.</p>
+        <p>Are you afraid of sending sensitive documents in an email due to fear of hacking or being forwarded? Well, now you can simply click the lock icon at the bottom of an email to enable the new Confidential Mode, which lets you add a bunch of extra layers of security (as mentioned below) to the emails of your choice.</p>
+        <p>1) Self-Destructing Emails: This feature lets you send emails that disappear from the recipient's inbox after a period (between 1 day and five years) you specify or which you can revoke at any time even after you have sent them.</p>
+        <p>2) Un-Forwardable Emails: Confidential emails open in a special window that does not allow the recipient to forward, copy or print the email, though recipients can still grab a screenshot, or snap a photo from their phone.</p>
+        <p>3) Two-factor Authentication (2FA) for Emails: If you're paranoid, you can even enable 2FA for a single email, requiring recipients to enter a secret passcode send to them via SMS before opening it.</p>
+        <p>All the above Confidential Mode features work even with emails sent to non-Gmail users, requiring them to click on a link before...<a href="https://thehackernews.com/2018/04/new-gmail-redesign.html" target="_blank">Click to continue reading the whole article.</a></p>
+      </div>
+      <span class="btn btn-info expandButton" data-toggle="collapse" data-target="#article5"></span>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>

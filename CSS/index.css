@@ -33,7 +33,7 @@
 }
 .header h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 4.8rem;
 }
 .menu-button {
   position: absolute;
@@ -57,7 +57,7 @@
 }
 .menu ul li {
   list-style-type: none;
-  font-size: 32px;
+  font-size: 3.2rem;
   padding: 30px 0;
   text-align: center;
 }
@@ -74,7 +74,6 @@
   border-radius: 10px;
   background-color: white;
   position: relative;
-  height: 50px;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
 }
@@ -86,12 +85,11 @@
   padding: 0;
   margin: 15px 0 0;
 }
-.article h5 {
-  font-size: 1.95rem;
-  padding: 0;
-  margin: 15px 0 0;
-}
 .article .date {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.article .author {
   margin: 0;
   font-size: 1.4rem;
 }
@@ -104,14 +102,14 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: grey;
   cursor: pointer;
   transform: translate(-50%);
   background-color: white;
 }
 .article-open {
-  height: 600px;
+  height: 400px;
 }
 html,
 body {
