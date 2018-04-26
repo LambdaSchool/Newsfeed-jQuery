@@ -77,16 +77,18 @@ class Article {
 articles = articles.map((index, element) => new Article(element));
 
 function articleCreator() {
+  const input = [$("#articleCreatorInputH2"), $("#articleCreatorInputDate"), $("#articleCreatorTextarea1")];
   // I'll probably refactor this into an array or object
-  const input = [$("#articleCreatorInputH2").val(), $("#articleCreatorInputDate").val(), $("#articleCreatorTextarea1").val()];
-  const articleH2 = $(`<h2></h2>`).text(input[0]);
-  const dateP = $(`<p class="date"></p>`).text(input[1]);
+  const articleH2 = $(`<h2></h2>`).text(input[0].val());
+  const dateP = $(`<p class="date"></p>`).text(input[1].val());
   const brBreak = $(`<br>`);
-  const textP = $(`<p></p>`).text(input[2]);
+  const textP = $(`<p></p>`).text(input[2].val());
   const expButton = $(`<span class='expandButton'></span>`);
   // Make that div and slap it into the DOM
   const newArticleDiv = $(`<div class="article"></div>`).append(articleH2, dateP, brBreak, textP, expButton);
   const articlesDiv = $(".articles");
   articlesDiv.append(newArticleDiv); 
   $(".article").last().map((index, element) => new Article(element));
+  input.map(element => element.val(""));
+  // Clear input fields https://stackoverflow.com/a/6364347
 }
