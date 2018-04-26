@@ -78,6 +78,9 @@
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
 }
+.article:hover {
+  cursor: pointer;
+}
 .article h2 {
   font-size: 28px;
   padding: 0;
@@ -98,12 +101,14 @@
   left: 50%;
   font-size: 12px;
   color: grey;
-  cursor: pointer;
   transform: translate(-50%);
   background-color: white;
 }
 .article-open {
   height: 400px;
+}
+.overlay {
+  overflow: overlay;
 }
 html,
 body {
