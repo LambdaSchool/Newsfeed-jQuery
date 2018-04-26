@@ -31,7 +31,7 @@ class Article {
       this.expandArticle();
       });
   
-    this.pTag = this.element.find('p');
+    
     /* 
       Use jQuery's .map function to map over the array of jQuery elements
       Within .map, we create a new instance of Article passing in each article element 
@@ -41,7 +41,7 @@ class Article {
     this.element.toggleClass('article-open');
     }
 
-    articles = articles.map( (index, article) => {
+    articles = articles.map( (index, element) => {
       new Article(element);
       });
       
