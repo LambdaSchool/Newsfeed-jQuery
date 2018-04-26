@@ -20,7 +20,9 @@ In this project we are going to be building a news feed reader. The goal is to h
 
 * Import menu.less from the correct path into index.less (follow the lead for header if you’re not sure how to write the correct path)
 * Use jQuery to select the menu and menu button components from the HTML. Look at the HTML code to determine the class names of both.
+
 * Write a callback function that add and removes a class to the menu when called. Hint: Look in the Menu.less file for the name of the class. 
+
 * Look at the LESS and determine what Is happening when the classes are added or removed. 
 Using jQuery, pass the callback to a click event listener on the button.
 
@@ -28,11 +30,14 @@ Using jQuery, pass the callback to a click event listener on the button.
 ### Part 2: The Articles
 
 * Make sure the Article LESS rules are being applied to the page.
+
 * Look over the LESS to see what is happening, but don’t change anything yet.
+
 * Using jQuery, select all articles. Map over the array creating individual instances of the Article class.
 * Within the Article class, set properties for the element, and expandButton.
 * Add text to the expand button reading: ‘Click to Expand’
 * Add a click event to the expand button (or entire article if you need to at first), pass the click event the ‘expandArticle’ method.
+
 * Within the expand article method add or remove the open class from the article. (Check the LESS for the correct class name)
 
 ### Part 3: Add Articles
