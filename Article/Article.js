@@ -82,7 +82,8 @@ function articleCreator() {
   const articleH2 = $(`<h2></h2>`).text(input[0].val());
   const dateP = $(`<p class="date"></p>`).text(input[1].val());
   const brBreak = $(`<br>`);
-  const textP = $(`<p></p>`).text(input[2].val());
+  const textP = $(`<p></p>`).html(input[2].val().replace(/\n/g, '<br/>'));
+  // Above from https://stackoverflow.com/a/16165362
   const expButton = $(`<span class='expandButton'></span>`);
   // Make that div and slap it into the DOM
   const newArticleDiv = $(`<div class="article"></div>`).append(articleH2, dateP, brBreak, textP, expButton);
