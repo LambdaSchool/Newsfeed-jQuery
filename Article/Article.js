@@ -38,9 +38,10 @@ class Article {
     // this.element.toggleClass("article-open")
     if(this.expandButton.text() === "Expand"){
       this.element.animate({
+        //scrollHeight knows how many px an element needs.  this works unless you expand the artical and then resize the screen.
         height: this.element.get(0).scrollHeight,
       }, 1500);
-      // this.element.slideDown("slow")
+  
       this.expandButton.text("Close");
     } else {
       this.element.animate({
