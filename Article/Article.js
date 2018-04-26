@@ -19,18 +19,32 @@ class Article {
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. 
     */
-    this.expandButton.text('Read More');
+    this.expandButton.text('Click to expand');
     /* 
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
     this.element.click(() => { this.expandArticle() });
+    this.articleP = this.element.find('.articleP')
+
   }
+
+
 
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
     this.element.toggleClass('article-open');
+    this.articleP.slideToggle().css('display', 'block');
+    if (this.element[0].classList[1] === 'article-open') {
+      this.expandButton.text('Click to close');
+    } else {
+      this.expandButton.text('Click to expand');
+    }
   }
+
+  // closeArticle() {
+  //   this.expandButton.text('Click to close');
+  // }
 }
 
 /* 
