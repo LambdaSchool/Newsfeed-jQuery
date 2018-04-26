@@ -10,6 +10,8 @@ class Article {
       To do so, wrap the element in jQuery syntax. 
     */
     this.element = $(element); //Does this link our new instanced object to the corresponding element in the DOM?
+    // Had to throw a scrollTop up here to scroll to top on page reloads
+    this.element.animate({ scrollTop: 0 }, "fast");
     /* 
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
@@ -24,23 +26,46 @@ class Article {
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-   this.element.click(() => this.resizeArticle()); // This part puzzles me greatly
+    this.element.click((e) => this.resizeArticle(e)); // This part puzzles me greatly
+    /*
+     Have my nifty new class throw in a close/dismiss button in the buttom of every article.
+    */
+    this.element.closeButton = $('<button id="closeButton"></button>').text("Dismiss article.");
+    this.element.append(this.element.closeButton);
+    /*
+     Done with an article? Swipe that thing left!
+    */
+    this.element.closeButton = this.element.find("#closeButton");
+    this.element.closeButton.click(() => this.dismissArticle());
   }
 
-  resizeArticle() {
+  resizeArticle(e) {
     /* Using our reference to the article element, add or remove a class */
     // Original Solution
     // this.element.toggleClass("article-open")
+    e.stopPropagation();
     const buttonText = this.expandButton;
     if (buttonText.text() === "Click to Expand") {
-      this.element.animate({height:'+=400px'},300);
+      this.element.animate({height:'+=350px'},300);
+      // Until I can work out the css, I'm going to hide the button when it's expanded
+      this.expandButton.hide();
+      // Due to the nature of my toggle, I still have to change the text
       this.expandButton.text("Click to Collapse");
+      // Articles now have a scroll bar. You can read all that lorem ipsum!
+      this.element.addClass("article-open");
     } else {
-      this.element.animate({height:'-=400px'},300);
+      this.element.animate({height:'-=350px'},300);
       this.expandButton.text("Click to Expand");
+      this.expandButton.show();
+      // Scrolls to the top of the article. Without it, it will collapse to where ever it was scrolled at last
+      this.element.animate({ scrollTop: 0 }, "fast");
+      // Get rid of that scroll bar when collapsed
+      this.element.removeClass("article-open");
     }
-    // A dead end below
-    // this.element.slideToggle(100, () => this.element.toggleClass("article-open"));
+  }
+
+  dismissArticle() {
+    this.element.animate({width:'toggle'},200);
   }
 }
 

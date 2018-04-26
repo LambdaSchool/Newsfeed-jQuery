@@ -1,3 +1,5 @@
+// main: ../LESS/index.less
+
 hr { border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc); }
 
 .articles {
@@ -41,10 +43,18 @@ hr { border: 0; height: 1px; background: #333; background-image: linear-gradient
     transform: translate(-50%);
     background-color: white;
   }
+
+  #closeButton {
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: 6px;
+    color: white;
+    background-color: red;
+  }
 }
 
 .article-open {
-  height: 400px;
+  overflow: scroll;
 }
 
 
