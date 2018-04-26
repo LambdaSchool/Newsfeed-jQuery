@@ -3,8 +3,6 @@
 const menu = jQuery(".menu");
 const menuButton = jQuery(".menu-button");
 
-console.log(menu.text());
-
 //Create a callback that will be passed to the menuButton click event listener
 //Inside this callback a class should be either added or removed from menu
 
