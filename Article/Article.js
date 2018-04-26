@@ -22,8 +22,8 @@ class Article {
       text on the button. 
     */
 
-    this.expandButton.text('click here');
-    console.log(this.expandButton.text('click here'));
+    this.expandButton.text('EXPAND HERE');
+    console.log(this.expandButton.text('EXPAND HERE'));
 
     /* 
       Set a click handler on the expand button (or article element), calling 
