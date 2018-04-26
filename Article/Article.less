@@ -9,8 +9,11 @@
   background-color: white;
   position: relative;
   height: 50px;
+  transition: height 1s;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
+  display: flex;
+  flex-direction: column;
 
   h2 {
     font-size: 28px;
@@ -32,7 +35,17 @@
   .expandButton {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    right: 43%;
+    font-size: 12px;
+    color: grey;
+    cursor: pointer;
+    transform: translate(-50%);
+    background-color: white;
+  }
+  .closeButton {
+    position: absolute;
+    bottom: 0;
+    left: 43%;
     font-size: 12px;
     color: grey;
     cursor: pointer;
@@ -43,8 +56,30 @@
 
 .article-open {
   height: 400px;
+  transition: height 1s;
 }
 
-
-
+.newArticle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px 20% 0 20%;
+} 
+label {
+  text-align: center;
+}
+input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
 
