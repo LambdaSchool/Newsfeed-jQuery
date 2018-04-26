@@ -38,8 +38,9 @@ class Article {
     // this.element.toggleClass("article-open")
     if(this.expandButton.text() === "Expand"){
       this.element.animate({
-        height: "400px",
+        height: this.element.get(0).scrollHeight,
       }, 1500);
+      // this.element.slideDown("slow")
       this.expandButton.text("Close");
     } else {
       this.element.animate({
