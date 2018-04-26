@@ -14,7 +14,7 @@ class Article {
       Using our new reference to the element, find the expand button within 
       the element and set a new property on the Article class. 
     */
-    this.expandButton = this.element.find('.expandButton');
+    this.expandButton = $(element).find('.expandButton').css({"color": "purple", "background-color" : "whitesmoke", "font-size": "11px","box-sizing":"border-box", "border":"1px dotted purple", "border-radius": "50%"});
     /* 
       Using our new reference to the expandButton, use jQuery to set the inner
       text on the button. v
@@ -26,25 +26,23 @@ class Article {
     */
     
 
-    this.expandButton.click( () => {
+    this.expandButton.click(() => {
       console.log('button clicked');
-      this.expandArticle();
-      });
-  
+      this.expandArticle()});
+    }
     
     /* 
       Use jQuery's .map function to map over the array of jQuery elements
       Within .map, we create a new instance of Article passing in each article element 
       to the constructor
     */
-   let expandArticle = () => {
+   expandArticle(event){
     this.element.toggleClass('article-open');
     }
-
-    articles = articles.map( (index, element) => {
+  }
+    articles = articles.map((index, element) => {
       new Article(element);
-      });
+    });
       
 
-  }
-}
+  
