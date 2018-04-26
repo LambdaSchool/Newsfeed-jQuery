@@ -26,7 +26,7 @@ class Article {
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-    this.element.click((e) => this.resizeArticle(e)); // This part puzzles me greatly
+    this.element.click(() => this.resizeArticle()); // This part puzzles me greatly
     /*
      Have my nifty new class throw in a close/dismiss button in the buttom of every article.
     */
@@ -39,11 +39,10 @@ class Article {
     this.element.closeButton.click(() => this.dismissArticle());
   }
 
-  resizeArticle(e) {
+  resizeArticle() {
     /* Using our reference to the article element, add or remove a class */
     // Original Solution
     // this.element.toggleClass("article-open")
-    e.stopPropagation();
     const buttonText = this.expandButton;
     if (buttonText.text() === "Click to Expand") {
       this.element.animate({height:'+=350px'},300);
