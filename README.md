@@ -28,18 +28,17 @@ Using jQuery, pass the callback to a click event listener on the button.
 
 
 ### Part 2: The Articles
-<!-- 
+
 * Make sure the Article LESS rules are being applied to the page.
+
 * Look over the LESS to see what is happening, but don’t change anything yet.
+
 * Using jQuery, select all articles. Map over the array creating individual instances of the Article class.
-
 * Within the Article class, set properties for the element, and expandButton.
-
 * Add text to the expand button reading: ‘Click to Expand’
-
 * Add a click event to the expand button (or entire article if you need to at first), pass the click event the ‘expandArticle’ method.
 
-* Within the expand article method add or remove the open class from the article. (Check the LESS for the correct class name) -->
+* Within the expand article method add or remove the open class from the article. (Check the LESS for the correct class name)
 
 ### Part 3: Add Articles
 
