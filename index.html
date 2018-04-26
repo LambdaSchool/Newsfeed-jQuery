@@ -3,8 +3,12 @@
 <html>
   <head>
     <title>Lambda School Newsfeed</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./CSS/index.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="./Menu/Menu.js" async></script>
     <script src="./Article/Article.js" async></script>
   </head>
@@ -23,7 +27,42 @@
         <li>Log Out</li>
       </ul>
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="articleCreatorInputH2">Title</label>
+                  <input type="text" class="form-control" id="articleCreatorInputH2" placeholder="Title of your Article" value="New Title">
+                </div>
+                <div class="form-group">
+                  <label for="articleCreatorInputDate">Date</label>
+                  <input type="date" class="form-control" id="articleCreatorInputDate" placeholder="Title of your Article">
+                </div>
+                <div class="form-group">
+                  <label for="articleCreatorTextarea1">Text</label>
+                  <textarea class="form-control" id="articleCreatorTextarea1" rows="3"></textarea>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="articleCreator()" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="articles">
+      <div class="text-center creator" data-toggle="modal" data-target="#exampleModal">
+        <h5>Want to make your own article? Click here!</h5>
+      </div>
       <div class="article">
         <h2>Lambda School Students: "We're the best!"</h2>
         <p class="date">Nov 5th, 2017</p>
