@@ -1,6 +1,3 @@
-/* Using jQuery, select all the article elements */
-let articles = $('.article');
-
 class Article {
   /* The constructor will take an element as it's only argument */
   constructor(element) {
@@ -41,9 +38,41 @@ class Article {
   }
 }
 
-/* 
-  Use jQuery's .map function to map over the array of jQuery elements
-  Within .map, we create a new instance of Article passing in each article element 
-  to the constructor
-*/
+// Select all the article elements
+// Using map, create a new instance of Article passing in each article element to the constructor
+let articles = $('.article');
 articles = articles.map((index, element) => new Article(element));
+
+// Stretch Goal: Component Constructor
+const articleComponentConstructor = function(articles){
+  const articleContainer = $('.articles'),
+        template = `<div class="article">
+                      <h2></h2>
+                      <p class="date"></p>
+                      <span class='expandButton'></span>
+                      <span class="close"><i class="fas fa-times-circle"></i></span>
+                    </div>`;
+
+  articles.forEach(x => {
+    // create html based on template
+    let newArticle = $(template),
+        articleBodyData = x.content.split('\n'),
+        articleBody = '';
+    
+    newArticle.find('h2').text(x.title);
+    newArticle.find('.date').text(x.date);
+    articleBodyData.forEach(x => {
+      let p = $('<p></p>');
+      p.html(x);
+      newArticle.find('.expandButton').before(p);
+    });
+
+    // pass element to new article
+    new Article(newArticle);
+
+    // insert into DOM
+    articleContainer.append(newArticle);
+  });
+};
+
+articleComponentConstructor(articleData);
