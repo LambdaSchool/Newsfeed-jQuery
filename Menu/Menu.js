@@ -4,7 +4,7 @@ const menuButton = $(".menu-button")
 
 var tl = new TimelineLite({paused:true, reversed:true});
 
-tl.staggerFromTo(menu, 1.5,
+tl.staggerFromTo(menu, 2,
     {rotationX:-90, transformOrigin:"50% 0%"},
     {rotationX:0, ease:Elastic.easeOut}, 0.4)
 
