@@ -26,6 +26,7 @@ class Article {
       the expandArticle method.
     */
    this.expandButton.click(() => { this.expandArticle() });
+   this.element.hover(() => { this.expandArticle() })
   }
 
   expandArticle() {
