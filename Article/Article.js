@@ -1,6 +1,6 @@
 /* Using jQuery, select all the article elements */
-let articles = $('.article');
 
+let articles = $('.article');
 
 class Article {
   /* The constructor will take an element as it's only argument */
@@ -26,10 +26,7 @@ class Article {
     */
     this.element.click(() => {this.expandArticle()});
     this.articleP = this.element.find('.articleP')
-    
-
   }
-
   expandArticle() {
     /* Using our reference to the article element, add or remove a class */
     this.element.toggleClass('article-open');
@@ -41,6 +38,16 @@ class Article {
     }
   }
 
+  // addArticle() {
+  //   $('.addArticle').submit(() => {
+  //     let header = $('#header').val();
+  //     let date = $('#date').val();
+
+  //     if (header && date) {
+  //       $('.article').append(`<h2>${header}</h2><p class="date">${date}</p><span></span>`)
+  //     }
+  //   })   
+  // }
 }
 
 /* 
@@ -50,39 +57,24 @@ class Article {
 */
 
 articles = articles.map(function (index, element) {
-  new Article(element);
-});
+     new Article(element)     
+})
 
-let createArticle = function (h2, date, p) {
-  let articleDiv = $("<div class='article'></div>");
-  let h2El = $(`<h2>${h2}</h2>`);
-  articleDiv.prepend(h2El)
-  articleDiv.append($(`<p class='date'>${date}</p>`))
-  articleDiv.append($("<div class='articleP'></div>"))
-  articleDiv.find('.articleP').prepend($(`<p>${p}</p>`))
-  articleDiv.append($("<span class='expandButton'>Click to expand</span>"))
-  $('.articles').append(articleDiv)
-
-
-  let showArticle = function () {
-    articleDiv.toggleClass('article-open');
-    articleP = articleDiv.find('.articleP')
-    expandButton = articleDiv.find('.expandButton');
-    articleP.slideToggle().css('display', 'block');
-    if (articleDiv[0].classList[1] === 'article-open') {
-      expandButton.text('Click to close');
-    } else {
-      expandButton.text('Click to expand');
-    }
-  } 
+let addArticle = function () {
+  let header = $('#header').val();
+  let date = $('#date').val();
+  let content = $('#content').val();
+  if (header && date && content) {
+    let newArticle = $(`<div class='article'><h2>${header}</h2><p class="date">${date}</p><div class='articleP'><p>${content}</p></div><span class="expandButton"></span></div>`) //document.createElement('div');
+    $('.articles').append(newArticle);
+    new Article(newArticle);
+  }
 }
 
 
-
-
-
-
-$('.addArticle').click(() => {
-  createArticle('Intro to React', 'Nov 29th, 2018', 'dasdasdasdsa');
-
+$('.addArticle').submit((event) => {
+  event.preventDefault();
+  addArticle();
 })
+
+
