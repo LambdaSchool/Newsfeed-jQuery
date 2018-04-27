@@ -2,6 +2,43 @@
 
 In this project we are going to be building a news feed reader. The goal is to have a collapsing menu, and expandable news articles. The HTML and CSS is already done for you, you simply need to connect the pieces. After the CSS is connected it is time to move on to building out our components using Javascript and jQuery. We will be adding common functionality and styling to build reusable components.
 
+## Newsfeed - jQuery
+
+### Setup
+- [ ] Run less-watch-compiler and open index.html
+
+### Part 1: The Menu
+- [ ] Import menu.less into index.less
+- [ ] Use jQuery to select the menu and menu button components
+- [ ] Write callback function to add/remove class to the menu
+- [ ] Look at LESS and determine what happens when classes are added/removed
+- [ ] Use jQuery to pass callback to a click event listener on the button
+
+### Part 2: The Articles
+- [ ] Make sure the article LESS rules are being applied
+- [ ] Look over the LESS (but don't make changes yet)
+- [ ] Select all articles using jQuery and map over the array to create individual articles
+- [ ] In the Article class, set properties for element and expandButton
+- [ ] Add "click to expand" text to the button
+- [ ] Add click event to the expand button
+- [ ] Within the expand method, add or remove the open class from the article
+
+### Part 3: Add Articles
+- [ ] Add your own articles to the HTML using the components we built
+
+### Stretch Goals
+- [ ] Animate the menu opening
+- [ ] Animate the article opening
+- [ ] Add a close button to each Article component
+- [ ] Create a component constructor function
+- [ ] Implement a form with input fields to write new articles
+
+## Good Habits
+- [ ] Pull Request title is your first and last name (add any notes in the comment field)
+- [ ] Code has been committed regularly
+- [ ] Commit comments are informative
+- [ ] Code is organized in a logical way
+
 ### Need to know:
 * jQuery:
   * Selector( `$()` )
