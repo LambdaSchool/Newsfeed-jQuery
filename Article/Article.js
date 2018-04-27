@@ -2,7 +2,7 @@
 let articles = $('.article');
 
 class Article {
-  /* The constructor will take an element as it's only argument */
+  /* The constructor will take an element as its only argument */
   constructor(element) {
     /* 
       We need to make sure the element being passed to us is a jQuery element.
