@@ -72,6 +72,9 @@ let addArticle = function () {
     newArticle.append(`<h2>${header}</h2><p class="date">${date}</p><div class='articleP'><p>${content}</p></div><span class="expandButton"></span>`)
     console.log(newArticle)
     $('.articles').append(newArticle);
+    document.getElementById('header').value = '';
+    document.getElementById('date').value = '';
+    document.getElementById('content').value = '';
     return new Article(newArticle);
   }
 }
