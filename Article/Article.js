@@ -1,6 +1,6 @@
 /* Using jQuery, select all the article elements */
-let articles = $('.article');
 
+let articles = $('.article');
 
 class Article {
   /* The constructor will take an element as it's only argument */
@@ -26,7 +26,6 @@ class Article {
     */
     this.element.click(() => { this.expandArticle() });
     this.articleP = this.element.find('.articleP')
-
   }
 
 
@@ -42,8 +41,15 @@ class Article {
     }
   }
 
-  // closeArticle() {
-  //   this.expandButton.text('Click to close');
+  // addArticle() {
+  //   $('.addArticle').submit(() => {
+  //     let header = $('#header').val();
+  //     let date = $('#date').val();
+
+  //     if (header && date) {
+  //       $('.article').append(`<h2>${header}</h2><p class="date">${date}</p><span></span>`)
+  //     }
+  //   })   
   // }
 }
 
@@ -54,5 +60,24 @@ class Article {
 */
 
 articles = articles.map(function (index, element) {
-  new Article(element);
-});
+  new Article(element)
+})
+
+let addArticle = function () {
+  let header = $('#header').val();
+  let date = $('#date').val();
+  let content = $('#content').val();
+  if (header && date && content) {
+    let newArticle = $("<div class='article'></div>") //document.createElement('div');
+    newArticle.append(`<h2>${header}</h2><p class="date">${date}</p><div class='articleP'><p>${content}</p></div><span class="expandButton"></span>`)
+    console.log(newArticle)
+    $('.articles').append(newArticle);
+    return new Article(newArticle);
+  }
+}
+
+
+$('.addArticle').submit((event) => {
+  event.preventDefault();
+  addArticle();
+})
