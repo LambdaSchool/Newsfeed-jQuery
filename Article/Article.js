@@ -26,11 +26,11 @@ class Article {
       Set a click handler on the expand button (or article element), calling 
       the expandArticle method. 
     */
-   this.expandButton.click(()=> {this.expandArticle});
+   this.expandButton.click(() => {this.expandArticle() })
   }
 
   expandArticle() {
-    this.element.toggleClass('article-open');
+    this.element.toggleClass('article-open')
     /* Using our reference to the article element, add or remove a class */
   }
 }
