@@ -1,13 +1,23 @@
+// out: ../CSS/index.css, compress: true, sourceMap: false
+
 /* This line is importing the font 'Roboto'. DO NOT change line 2*/
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+// @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 
 /* Below this line is where you will start your work */
 /* It is important to note, you will not be writing any CSS in this file*/
+// relativeUrls: true
 @import '../Header/Header.less';
+@import '../Menu/Menu.less';
+@import '../Article/Article.less';
 
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto';
   background-color: #fffef7;
+}
+
+h1, h2, h3, h4, h5 h6 {
+  font-weight: 0;
+  font-family: 'Roboto';
 }

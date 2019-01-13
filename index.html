@@ -3,9 +3,14 @@
 <html>
   <head>
     <title>Lambda School Newsfeed</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./CSS/index.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="./Menu/Menu.js" async></script>
+    <script src="./Article/Article.js" async></script>
   </head>
   <body>
     <div class="header">
@@ -22,7 +27,42 @@
         <li>Log Out</li>
       </ul>
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Article Creator</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="articleCreatorInputH2">Title</label>
+                  <input type="text" class="form-control" id="articleCreatorInputH2" placeholder="Title of your Article" value="New Title">
+                </div>
+                <div class="form-group">
+                  <label for="articleCreatorInputDate">Date</label>
+                  <input type="date" class="form-control" id="articleCreatorInputDate" placeholder="Title of your Article">
+                </div>
+                <div class="form-group">
+                  <label for="articleCreatorTextarea1">Text</label>
+                  <textarea class="form-control" id="articleCreatorTextarea1" rows="3"></textarea>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="articleCreator()" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="articles">
+      <div class="text-center creator" data-toggle="modal" data-target="#exampleModal">
+        <h5>Want to make your own article? Click here!</h5>
+      </div>
       <div class="article">
         <h2>Lambda School Students: "We're the best!"</h2>
         <p class="date">Nov 5th, 2017</p>
@@ -45,6 +85,7 @@
         han. C-3po antilles moff qui-gon ahsoka aayla dooku amidala. Palpatine droid amidala droid k-3po twi'lek padmé wookiee. Leia
         moff calamari mon obi-wan. Solo grievous lando coruscant. Jinn darth palpatine obi-wan mon.</p>
         <span class='expandButton'></span>
+        <!-- <span class='readButton'></span> -->
       </div>
       <div class="article">
         <h2>Javascript and You, ES6</h2>
@@ -109,6 +150,38 @@
           hodor hodor hodor? Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor! Hodor, hodor. Hodor. Hodor, HODOR
           hodor, hodor hodor, hodor, hodor hodor. Hodor hodor - hodor - hodor... Hodor hodor hodor hodor hodor hodor hodor?! Hodor
           hodor - hodor hodor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor? </p>
+        <span class='expandButton'></span>
+      </div>
+      <div class="article">
+        <h2>Lorem Ipsum</h2>
+        <p class="date">April 20th, 2018</p>
+        <p>I had a client review a design, and all the textarea’s were filled with ‘Lorem Ipsum’. Reply: It looks good, but we don’t understand it.</p>
+        
+        <p>Me: What don’t you understand?</p>
+        
+        <p>Reply:  The text. What language is that anyway?</p>
+
+        <p>Me: It doesn’t mean anything, it’s to fill up the textareas. Just focus on the design, not the content.</p>
+
+        <p>Reply, after a day or two: Could you please type the text from our brochure in there, we can’t review the site in a foreign language.</p>
+
+        <p><em>From</em> <a href="https://clientsfromhell.net/post/258445767/lorem-ipsum">Clients from Hell</a></p>
+        <span class='expandButton'></span>
+      </div>
+      <div class="article">
+        <h2>Why does less-watch-compiler break my heart? :(</h2>
+        <p class="date">April 25th, 2018</p>
+        <p>Dear Lambda,</p>
+        
+        <p>Today, I was real pumped for today's project, but then all of a sudden, less-watch-compiler decided to be a total #@($@! to me. It led me to a dark alleyway of despair and robbed me of my sanity for 40 minutes. Why does it do that to me? :(</p>
+        
+        <hr> 
+
+        <p>Dear Ronald:</p>
+
+        <p>Lorem ipsum dolor amet austin messenger bag thundercats poutine. Wolf 3 wolf moon vaporware cardigan kale chips chillwave lumbersexual chicharrones marfa typewriter palo santo craft beer.</p>
+
+        <p>Hope that helped!</p>
         <span class='expandButton'></span>
       </div>
     </div>
